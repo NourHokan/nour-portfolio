@@ -38,34 +38,49 @@
 <body class="text-slate-600 antialiased relative selection:bg-blue-200 selection:text-slate-800 transition-all duration-300">
 
     <div class="fixed inset-0 pointer-events-none z-[-1] opacity-70">
-        <div class="absolute top-0 right-10 w-[500px] h-[500px] bg-blue-100 rounded-full mix-blend-multiply blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-0 left-10 w-[600px] h-[600px] bg-slate-200 rounded-full mix-blend-multiply blur-3xl animate-pulse" style="animation-delay: 3s;"></div>
+        <div class="absolute top-0 right-10 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-100 rounded-full mix-blend-multiply blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 left-10 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-slate-200 rounded-full mix-blend-multiply blur-3xl animate-pulse" style="animation-delay: 3s;"></div>
     </div>
 
-    <nav class="fixed w-full z-50 top-0 bg-white/70 backdrop-blur-md border-b border-white shadow-sm" data-aos="fade-down" data-aos-duration="800">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-black text-slate-500 hover:text-slate-600 transition-colors" data-ar="نور حوكان" data-en="Nour Hokan">نور حوكان</a>
+    <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-white shadow-sm" data-aos="fade-down" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center relative">
+            
+            <a href="#home" class="text-xl md:text-2xl font-black text-slate-500 hover:text-slate-600 transition-colors" data-ar="نور حوكان" data-en="Nour Hokan">نور حوكان</a>
             
             <div class="hidden md:flex gap-8 text-sm font-bold text-slate-400">
                 <a href="#home" class="hover:text-blue-500 transition-colors" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
                 <a href="#about" class="hover:text-blue-500 transition-colors" data-ar="حول" data-en="About">حول</a>
                 <a href="#skills" class="hover:text-blue-500 transition-colors" data-ar="المهارات" data-en="Skills">المهارات</a>
                 <a href="#projects" class="hover:text-blue-500 transition-colors" data-ar="المشاريع" data-en="Projects">المشاريع</a>
-                <a href="#contact" class="hover:text-blue-500 transition-colors" data-ar="معلومات التواصل" data-en="Contact">معلومات التواصل</a>
+                <a href="#contact" class="hover:text-blue-500 transition-colors" data-ar="التواصل" data-en="Contact">التواصل</a>
             </div>
             
-            <button onclick="toggleLanguage()" class="bg-white text-slate-500 hover:bg-slate-100 px-4 py-2 rounded-xl text-sm transition-all flex items-center gap-2 font-bold shadow-sm border border-slate-200 hover:border-blue-300">
-                <i class="fa-solid fa-globe text-blue-500 text-lg"></i> <span id="lang-text">English</span>
-            </button>
+            <div class="flex items-center gap-3">
+                <button onclick="toggleLanguage()" class="bg-white text-slate-500 hover:bg-slate-100 px-3 py-1.5 md:px-4 md:py-2 rounded-xl text-xs md:text-sm transition-all flex items-center gap-2 font-bold shadow-sm border border-slate-200 hover:border-blue-300">
+                    <i class="fa-solid fa-globe text-blue-500 text-lg"></i> <span id="lang-text">English</span>
+                </button>
+
+                <button id="mobile-menu-btn" class="md:hidden text-slate-500 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg flex-col items-center py-4 gap-4 md:hidden">
+            <a href="#home" class="mobile-link text-slate-500 font-bold hover:text-blue-500" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="#about" class="mobile-link text-slate-500 font-bold hover:text-blue-500" data-ar="حول" data-en="About">حول</a>
+            <a href="#skills" class="mobile-link text-slate-500 font-bold hover:text-blue-500" data-ar="المهارات" data-en="Skills">المهارات</a>
+            <a href="#projects" class="mobile-link text-slate-500 font-bold hover:text-blue-500" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+            <a href="#contact" class="mobile-link text-slate-500 font-bold hover:text-blue-500" data-ar="التواصل" data-en="Contact">التواصل</a>
         </div>
     </nav>
 
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-[0.07] pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1920'); background-size: cover; background-position: center; background-attachment: fixed;"></div>
         <div class="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-transparent to-[#eff6ff] pointer-events-none"></div>
 
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-white border border-slate-200 text-slate-500 text-sm font-bold shadow-sm" data-ar="<span class='relative flex h-3 w-3'><span class='animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75'></span><span class='relative inline-flex rounded-full h-3 w-3 bg-blue-500'></span></span> حلول برمجية رقمية مبتكرة" data-en="<span class='relative flex h-3 w-3'><span class='animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75'></span><span class='relative inline-flex rounded-full h-3 w-3 bg-blue-500'></span></span> Innovative Digital Software Solutions">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center relative z-10" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 mb-6 md:mb-8 rounded-full bg-white border border-slate-200 text-slate-500 text-xs md:text-sm font-bold shadow-sm" data-ar="<span class='relative flex h-3 w-3'><span class='animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75'></span><span class='relative inline-flex rounded-full h-3 w-3 bg-blue-500'></span></span> حلول برمجية رقمية مبتكرة" data-en="<span class='relative flex h-3 w-3'><span class='animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75'></span><span class='relative inline-flex rounded-full h-3 w-3 bg-blue-500'></span></span> Innovative Digital Software Solutions">
                 <span class="relative flex h-3 w-3">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
@@ -73,64 +88,64 @@
                 حلول برمجية رقمية مبتكرة
             </div>
 
-            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 text-slate-500 leading-tight" data-ar="نور حوكان" data-en="Nour Hokan">نور حوكان</h1>
-            <h2 class="text-2xl md:text-3xl font-extrabold text-blue-500 mb-8" data-ar="مهندسة برمجيات ومطورة نظم متكاملة" data-en="Software Engineer & Integrated Systems Developer">مهندسة برمجيات ومطورة نظم متكاملة</h2>
-            <p class="text-slate-500 leading-relaxed text-lg mb-10 font-medium px-4" data-ar="أمتلك شغفاً بتحويل الأفكار إلى حلول رقمية ملموسة. أعتمد على خبرتي في هندسة البرمجيات والتطوير التقني لبناء أنظمة وتطبيقات متكاملة تضمن الكفاءة العالية والأداء الممتاز." data-en="I have a passion for transforming ideas into tangible digital solutions. I rely on my expertise in software engineering and technical development to build integrated systems and apps that ensure high efficiency and excellent performance.">أمتلك شغفاً بتحويل الأفكار إلى حلول رقمية ملموسة. أعتمد على خبرتي في هندسة البرمجيات والتطوير التقني لبناء أنظمة وتطبيقات متكاملة تضمن الكفاءة العالية والأداء الممتاز.</p>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-4 md:mb-6 text-slate-500 leading-tight" data-ar="نور حوكان" data-en="Nour Hokan">نور حوكان</h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-500 mb-6 md:mb-8" data-ar="مهندسة برمجيات ومطورة نظم متكاملة" data-en="Software Engineer & Integrated Systems Developer">مهندسة برمجيات ومطورة نظم متكاملة</h2>
+            <p class="text-slate-500 leading-relaxed text-base md:text-lg mb-8 md:mb-10 font-medium px-2 md:px-4" data-ar="أمتلك شغفاً بتحويل الأفكار إلى حلول رقمية ملموسة. أعتمد على خبرتي في هندسة البرمجيات والتطوير التقني لبناء أنظمة وتطبيقات متكاملة تضمن الكفاءة العالية والأداء الممتاز." data-en="I have a passion for transforming ideas into tangible digital solutions. I rely on my expertise in software engineering and technical development to build integrated systems and apps that ensure high efficiency and excellent performance.">أمتلك شغفاً بتحويل الأفكار إلى حلول رقمية ملموسة. أعتمد على خبرتي في هندسة البرمجيات والتطوير التقني لبناء أنظمة وتطبيقات متكاملة تضمن الكفاءة العالية والأداء الممتاز.</p>
             
-            <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <a href="#projects" class="bg-slate-500 text-white hover:bg-slate-600 px-8 py-3.5 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 flex items-center gap-2">
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mt-8 md:mt-10">
+                <a href="#projects" class="bg-slate-500 text-white hover:bg-slate-600 px-6 py-3 md:px-8 md:py-3.5 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 flex items-center justify-center gap-2">
                     <span data-ar="استعراض المشاريع" data-en="View Projects">استعراض المشاريع</span> <i class="fa-solid fa-arrow-down"></i>
                 </a>
-                <a href="#contact" class="bg-white text-slate-500 hover:text-blue-600 border border-slate-200 shadow-sm px-8 py-3.5 rounded-xl font-bold transition-all flex items-center gap-2 hover:-translate-y-1 duration-300">
+                <a href="#contact" class="bg-white text-slate-500 hover:text-blue-600 border border-slate-200 shadow-sm px-6 py-3 md:px-8 md:py-3.5 rounded-xl font-bold transition-all flex items-center justify-center gap-2 hover:-translate-y-1 duration-300">
                     <span data-ar="معلومات التواصل" data-en="Contact Info">معلومات التواصل</span> <i class="fa-regular fa-user"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="relative z-10 py-20 bg-white/40 backdrop-blur-md border-t border-white">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-black text-slate-600 mb-8" data-aos="fade-up"><span data-ar="الرؤية والمنهجية" data-en="Vision & Methodology">الرؤية والمنهجية</span></h3>
-            <p class="text-slate-500 leading-relaxed text-lg font-medium px-4 md:px-20" data-aos="fade-up" data-aos-delay="100" data-ar="تصميم وتطوير حلول برمجية متقدمة تعتمد على الكفاءة التقنية العالية في هندسة البرمجيات. الهدف الأساسي هو بناء أنظمة وتطبيقات متكاملة تدعم التطور التقني، تحسن العمليات البرمجية، وتحقق أهداف المشاريع بفعالية وموثوقية تامة، إلى جانب شغفي بمشاركة المعرفة التقنية وتمكين الأفراد رقمياً." data-en="Designing and developing advanced software solutions based on high technical proficiency in software engineering. The primary goal is to build integrated systems and apps that support technical advancement, optimize software processes, and reliably achieve project goals, alongside my passion for sharing technical knowledge and digitally empowering individuals.">تصميم وتطوير حلول برمجية متقدمة تعتمد على الكفاءة التقنية العالية في هندسة البرمجيات. الهدف الأساسي هو بناء أنظمة وتطبيقات متكاملة تدعم التطور التقني، تحسن العمليات البرمجية، وتحقق أهداف المشاريع بفعالية وموثوقية تامة، إلى جانب شغفي بمشاركة المعرفة التقنية وتمكين الأفراد رقمياً.</p>
+    <section id="about" class="relative z-10 py-16 md:py-20 bg-white/40 backdrop-blur-md border-t border-white">
+        <div class="max-w-5xl mx-auto px-4 md:px-6 text-center">
+            <h3 class="text-2xl md:text-3xl font-black text-slate-600 mb-6 md:mb-8" data-aos="fade-up"><span data-ar="الرؤية والمنهجية" data-en="Vision & Methodology">الرؤية والمنهجية</span></h3>
+            <p class="text-slate-500 leading-relaxed text-base md:text-lg font-medium px-2 md:px-20" data-aos="fade-up" data-aos-delay="100" data-ar="تصميم وتطوير حلول برمجية متقدمة تعتمد على الكفاءة التقنية العالية في هندسة البرمجيات. الهدف الأساسي هو بناء أنظمة وتطبيقات متكاملة تدعم التطور التقني، تحسن العمليات البرمجية، وتحقق أهداف المشاريع بفعالية وموثوقية تامة، إلى جانب شغفي بمشاركة المعرفة التقنية وتمكين الأفراد رقمياً." data-en="Designing and developing advanced software solutions based on high technical proficiency in software engineering. The primary goal is to build integrated systems and apps that support technical advancement, optimize software processes, and reliably achieve project goals, alongside my passion for sharing technical knowledge and digitally empowering individuals.">تصميم وتطوير حلول برمجية متقدمة تعتمد على الكفاءة التقنية العالية في هندسة البرمجيات. الهدف الأساسي هو بناء أنظمة وتطبيقات متكاملة تدعم التطور التقني، تحسن العمليات البرمجية، وتحقق أهداف المشاريع بفعالية وموثوقية تامة، إلى جانب شغفي بمشاركة المعرفة التقنية وتمكين الأفراد رقمياً.</p>
         </div>
     </section>
 
-    <section id="skills" class="relative z-10 py-20 bg-white/60 backdrop-blur-lg border-y border-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-3xl font-black text-slate-600 mb-10 flex items-center gap-3" data-aos="fade-right">
+    <section id="skills" class="relative z-10 py-16 md:py-20 bg-white/60 backdrop-blur-lg border-y border-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h3 class="text-2xl md:text-3xl font-black text-slate-600 mb-8 md:mb-10 flex items-center justify-center md:justify-start gap-3" data-aos="fade-right">
                 <i class="fa-solid fa-microchip text-slate-400"></i> <span data-ar="المهارات التقنية والتدريبية" data-en="Technical & Training Skills">المهارات التقنية والتدريبية</span>
             </h3>
-            <div class="flex flex-wrap gap-4" data-aos="fade-up">
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-blue-400 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-flutter text-blue-500 text-xl"></i> Flutter & Dart</span>
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-red-400 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-laravel text-red-500 text-xl"></i> Laravel & PHP</span>
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-blue-400 transition-all shadow-sm flex items-center gap-2"><i class="fa-solid fa-database text-blue-400 text-xl"></i> MySQL</span>
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-slate-800 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-unity text-slate-800 text-xl"></i> Unity & C#</span>
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-yellow-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-python text-yellow-500 text-xl"></i> Python & Arduino</span>
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-orange-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-html5 text-orange-500 text-xl"></i> Web Technologies</span>
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-emerald-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-solid fa-chalkboard-user text-emerald-500 text-xl"></i> <span data-ar="مدربة تقنية (روبوتيك وحاسوب)" data-en="Technical Trainer (Robotics & PC)">مدربة تقنية (روبوتيك وحاسوب)</span></span>
-                <span class="bg-white text-slate-500 px-6 py-3 rounded-xl border border-slate-200 font-bold hover:border-purple-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-solid fa-users-rays text-purple-500 text-xl"></i> <span data-ar="مدربة تمكين رقمي" data-en="Digital Empowerment Trainer">مدربة تمكين رقمي</span></span>
+            <div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4" data-aos="fade-up">
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-blue-400 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-flutter text-blue-500 text-lg md:text-xl"></i> Flutter & Dart</span>
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-red-400 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-laravel text-red-500 text-lg md:text-xl"></i> Laravel & PHP</span>
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-blue-400 transition-all shadow-sm flex items-center gap-2"><i class="fa-solid fa-database text-blue-400 text-lg md:text-xl"></i> MySQL</span>
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-slate-800 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-unity text-slate-800 text-lg md:text-xl"></i> Unity & C#</span>
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-yellow-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-python text-yellow-500 text-lg md:text-xl"></i> Python & Arduino</span>
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-orange-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-brands fa-html5 text-orange-500 text-lg md:text-xl"></i> Web Technologies</span>
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-emerald-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-solid fa-chalkboard-user text-emerald-500 text-lg md:text-xl"></i> <span data-ar="مدربة تقنية" data-en="Technical Trainer">مدربة تقنية</span></span>
+                <span class="bg-white text-slate-500 px-4 py-2 text-sm md:text-base md:px-6 md:py-3 rounded-xl border border-slate-200 font-bold hover:border-purple-500 transition-all shadow-sm flex items-center gap-2"><i class="fa-solid fa-users-rays text-purple-500 text-lg md:text-xl"></i> <span data-ar="مدربة تمكين رقمي" data-en="Digital Empowerment Trainer">مدربة تمكين رقمي</span></span>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-3xl font-black text-slate-600 mb-12 flex items-center gap-3" data-aos="fade-right">
+    <section id="projects" class="py-16 md:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h3 class="text-2xl md:text-3xl font-black text-slate-600 mb-8 md:mb-12 flex items-center justify-center md:justify-start gap-3" data-aos="fade-right">
                 <i class="fa-solid fa-briefcase text-blue-500"></i> <span data-ar="سجل المشاريع والأعمال" data-en="Projects Portfolio">سجل المشاريع والأعمال</span>
             </h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 
                 <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 project-card group" data-aos="fade-up">
                     <div class="img-container border-b border-slate-100 bg-emerald-50">
                         <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=800" alt="السوق الدواء السوري" class="img-front">
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-black text-slate-600 mb-3 group-hover:text-emerald-600 transition-colors" data-ar="السوق الدواء السوري" data-en="Syrian Medicine Market">السوق الدواء السوري</h4>
-                        <p class="text-slate-500 mb-6 text-sm font-medium leading-relaxed" data-ar="نظام متكامل لإدارة المستودعات الطبية في سوريا، يضمن دقة التتبع وسرعة الأداء لتلبية احتياجات السوق والمؤسسات الطبية." data-en="An integrated system for managing medical warehouses in Syria, ensuring tracking accuracy and fast performance to meet the needs of the market and medical institutions.">نظام متكامل لإدارة المستودعات الطبية في سوريا، يضمن دقة التتبع وسرعة الأداء لتلبية احتياجات السوق والمؤسسات الطبية.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">Flutter</span>
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">Dart</span>
+                    <div class="p-5 md:p-6">
+                        <h4 class="text-lg md:text-xl font-black text-slate-600 mb-2 md:mb-3 group-hover:text-emerald-600 transition-colors" data-ar="السوق الدواء السوري" data-en="Syrian Medicine Market">السوق الدواء السوري</h4>
+                        <p class="text-slate-500 mb-4 md:mb-6 text-xs md:text-sm font-medium leading-relaxed" data-ar="نظام متكامل لإدارة المستودعات الطبية في سوريا، يضمن دقة التتبع وسرعة الأداء لتلبية احتياجات السوق والمؤسسات الطبية." data-en="An integrated system for managing medical warehouses in Syria, ensuring tracking accuracy and fast performance to meet the needs of the market and medical institutions.">نظام متكامل لإدارة المستودعات الطبية في سوريا، يضمن دقة التتبع وسرعة الأداء لتلبية احتياجات السوق والمؤسسات الطبية.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] md:text-xs font-bold text-slate-500">
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">Flutter</span>
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">Dart</span>
                         </div>
                     </div>
                 </div>
@@ -139,12 +154,12 @@
                     <div class="img-container border-b border-slate-100 bg-slate-50">
                         <img src="https://sorbonnetraining.com//storage/blogs/May2024/2150041866%20(1).jpg" alt="واجهة تطبيق SmartTech لدارة المهام" class="img-front">
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-black text-slate-600 mb-3 group-hover:text-blue-600 transition-colors" data-ar="تطبيق إدارة المهام (SmartTech)" data-en="Task Management App (SmartTech)">تطبيق إدارة المهام (SmartTech)</h4>
-                        <p class="text-slate-500 mb-6 text-sm font-medium leading-relaxed" data-ar="تطبيق مخصص لرفع الإنتاجية وإدارة المهام اليومية (To-Do List)، مصمم بأسلوب عصري يضمن تجربة مستخدم سلسة وفعالة." data-en="A custom application designed to increase productivity and manage daily tasks (To-Do List), built with a modern style ensuring a smooth and effective user experience.">تطبيق مخصص لرفع الإنتاجية وإدارة المهام اليومية (To-Do List)، مصمم بأسلوب عصري يضمن تجربة مستخدم سلسة وفعالة.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">Flutter</span>
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">Android SDK</span>
+                    <div class="p-5 md:p-6">
+                        <h4 class="text-lg md:text-xl font-black text-slate-600 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors" data-ar="تطبيق إدارة المهام (SmartTech)" data-en="Task Management App (SmartTech)">تطبيق إدارة المهام (SmartTech)</h4>
+                        <p class="text-slate-500 mb-4 md:mb-6 text-xs md:text-sm font-medium leading-relaxed" data-ar="تطبيق مخصص لرفع الإنتاجية وإدارة المهام اليومية (To-Do List)، مصمم بأسلوب عصري يضمن تجربة مستخدم سلسة وفعالة." data-en="A custom application designed to increase productivity and manage daily tasks (To-Do List), built with a modern style ensuring a smooth and effective user experience.">تطبيق مخصص لرفع الإنتاجية وإدارة المهام اليومية (To-Do List)، مصمم بأسلوب عصري يضمن تجربة مستخدم سلسة وفعالة.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] md:text-xs font-bold text-slate-500">
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">Flutter</span>
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">Android SDK</span>
                         </div>
                     </div>
                 </div>
@@ -153,13 +168,12 @@
                     <div class="img-container border-b border-slate-100 bg-blue-50">
                         <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=800" alt="أزهار النور" class="img-front">
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-black text-slate-600 mb-3 group-hover:text-blue-500 transition-colors" data-ar="متجر بيع الزهور" data-en="Azhar Al-Noor E-Commerce"> متجر بيع الزهور
-                             </h4>
-                        <p class="text-slate-500 mb-6 text-sm font-medium leading-relaxed" data-ar="متجر إلكتروني متكامل لاستعراض وبيع وتنسيق الأزهار، مزود بلوحة تحكم لإدارة المنتجات والطلبات." data-en="An integrated e-commerce store for showcasing, selling, and arranging flowers, equipped with a control panel to manage products and orders.">متجر إلكتروني متكامل لاستعراض وبيع وتنسيق الأزهار، مزود بلوحة تحكم لإدارة المنتجات والطلبات.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">PHP</span>
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">Database</span>
+                    <div class="p-5 md:p-6">
+                        <h4 class="text-lg md:text-xl font-black text-slate-600 mb-2 md:mb-3 group-hover:text-blue-500 transition-colors" data-ar="متجر بيع الزهور" data-en="Azhar Al-Noor E-Commerce">متجر بيع الزهور</h4>
+                        <p class="text-slate-500 mb-4 md:mb-6 text-xs md:text-sm font-medium leading-relaxed" data-ar="متجر إلكتروني متكامل لاستعراض وبيع وتنسيق الأزهار، مزود بلوحة تحكم لإدارة المنتجات والطلبات." data-en="An integrated e-commerce store for showcasing, selling, and arranging flowers, equipped with a control panel to manage products and orders.">متجر إلكتروني متكامل لاستعراض وبيع وتنسيق الأزهار، مزود بلوحة تحكم لإدارة المنتجات والطلبات.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] md:text-xs font-bold text-slate-500">
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">PHP</span>
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">Database</span>
                         </div>
                     </div>
                 </div>
@@ -168,12 +182,12 @@
                     <div class="img-container border-b border-slate-100 bg-orange-50">
                         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800" alt="لقمة هنية" class="img-front">
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-black text-slate-600 mb-3 group-hover:text-orange-500 transition-colors" data-ar="نظام إدارة المطاعم  " data-en="Restaurant Management (Lokma Hanya)">نظام إدارة المطاعم  </h4>
-                        <p class="text-slate-500 mb-6 text-sm font-medium leading-relaxed" data-ar="نظام ويب مخصص لحجز الطاولات وإدارة القوائم الرقمية للمطاعم، مصمم لتنظيم سير العمل الداخلي." data-en="A web system dedicated to table reservations and managing digital menus for restaurants, designed to organize internal workflow.">نظام ويب مخصص لحجز الطاولات وإدارة القوائم الرقمية للمطاعم، مصمم لتنظيم سير العمل الداخلي.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">PHP Framework</span>
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">MySQL</span>
+                    <div class="p-5 md:p-6">
+                        <h4 class="text-lg md:text-xl font-black text-slate-600 mb-2 md:mb-3 group-hover:text-orange-500 transition-colors" data-ar="نظام إدارة المطاعم" data-en="Restaurant Management (Lokma Hanya)">نظام إدارة المطاعم</h4>
+                        <p class="text-slate-500 mb-4 md:mb-6 text-xs md:text-sm font-medium leading-relaxed" data-ar="نظام ويب مخصص لحجز الطاولات وإدارة القوائم الرقمية للمطاعم، مصمم لتنظيم سير العمل الداخلي." data-en="A web system dedicated to table reservations and managing digital menus for restaurants, designed to organize internal workflow.">نظام ويب مخصص لحجز الطاولات وإدارة القوائم الرقمية للمطاعم، مصمم لتنظيم سير العمل الداخلي.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] md:text-xs font-bold text-slate-500">
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">PHP Framework</span>
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -182,12 +196,12 @@
                     <div class="img-container border-b border-slate-100 bg-slate-50">
                         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800" alt="المكتبة الرقمية المتقدمة المعرفة السحابية" class="img-front">
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-black text-slate-600 mb-3 group-hover:text-slate-500 transition-colors" data-ar="المكتبة الرقمية Al_Sana" data-en="Al_Sana Digital Library">المكتبة الرقمية Al_Sana</h4>
-                        <p class="text-slate-500 mb-6 text-sm font-medium leading-relaxed" data-ar="منصة متقدمة لإدارة وعرض المحتوى الرقمي والكتب، تتميز بهيكلية قواعد بيانات قوية لدعم البحث والتحميل." data-en="An advanced platform for managing and displaying digital content and books, featuring a robust database structure to support search and downloads.">منصة متقدمة لإدارة وعرض المحتوى الرقمي والكتب، تتميز بهيكلية قواعد بيانات قوية لدعم البحث والتحميل.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">Laravel</span>
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">MySQL</span>
+                    <div class="p-5 md:p-6">
+                        <h4 class="text-lg md:text-xl font-black text-slate-600 mb-2 md:mb-3 group-hover:text-slate-500 transition-colors" data-ar="المكتبة الرقمية Al_Sana" data-en="Al_Sana Digital Library">المكتبة الرقمية Al_Sana</h4>
+                        <p class="text-slate-500 mb-4 md:mb-6 text-xs md:text-sm font-medium leading-relaxed" data-ar="منصة متقدمة لإدارة وعرض المحتوى الرقمي والكتب، تتميز بهيكلية قواعد بيانات قوية لدعم البحث والتحميل." data-en="An advanced platform for managing and displaying digital content and books, featuring a robust database structure to support search and downloads.">منصة متقدمة لإدارة وعرض المحتوى الرقمي والكتب، تتميز بهيكلية قواعد بيانات قوية لدعم البحث والتحميل.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] md:text-xs font-bold text-slate-500">
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">Laravel</span>
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -196,12 +210,12 @@
                     <div class="img-container border-b border-slate-100 bg-slate-50">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" alt="المبيعات" class="img-front">
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-black text-slate-600 mb-3 group-hover:text-blue-500 transition-colors" data-ar="نظام إدارة المبيعات والمنتجات" data-en="Sales & Product Management System">نظام إدارة المبيعات والمنتجات</h4>
-                        <p class="text-slate-500 mb-6 text-sm font-medium leading-relaxed" data-ar="لوحة تحكم إدارية متكاملة تتيح مراقبة المبيعات، استخراج التقارير التحليلية، وإدارة المنتجات بدقة." data-en="An integrated administrative dashboard that allows monitoring sales, extracting analytical reports, and accurately managing products.">لوحة تحكم إدارية متكاملة تتيح مراقبة المبيعات، استخراج التقارير التحليلية، وإدارة المنتجات بدقة.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">Laravel</span>
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">PHP</span>
+                    <div class="p-5 md:p-6">
+                        <h4 class="text-lg md:text-xl font-black text-slate-600 mb-2 md:mb-3 group-hover:text-blue-500 transition-colors" data-ar="نظام إدارة المبيعات والمنتجات" data-en="Sales & Product Management System">نظام إدارة المبيعات والمنتجات</h4>
+                        <p class="text-slate-500 mb-4 md:mb-6 text-xs md:text-sm font-medium leading-relaxed" data-ar="لوحة تحكم إدارية متكاملة تتيح مراقبة المبيعات، استخراج التقارير التحليلية، وإدارة المنتجات بدقة." data-en="An integrated administrative dashboard that allows monitoring sales, extracting analytical reports, and accurately managing products.">لوحة تحكم إدارية متكاملة تتيح مراقبة المبيعات، استخراج التقارير التحليلية، وإدارة المنتجات بدقة.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] md:text-xs font-bold text-slate-500">
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">Laravel</span>
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">PHP</span>
                         </div>
                     </div>
                 </div>
@@ -210,12 +224,12 @@
                     <div class="img-container border-b border-slate-100 bg-slate-50">
                         <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=800" alt="الملاحظات Digital Notes" class="img-front">
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-black text-slate-600 mb-3 group-hover:text-slate-500 transition-colors" data-ar="نظام أرشفة وتدوين السجلات" data-en="Archiving & Notes Management">نظام أرشفة وتدوين السجلات</h4>
-                        <p class="text-slate-500 mb-6 text-sm font-medium leading-relaxed" data-ar="تطبيق ويب مخصص لحفظ السجلات والملاحظات مع واجهة مستخدم تفاعلية لضمان تنظيم البيانات وسهولة الوصول إليها." data-en="A web application dedicated to keeping records and notes with an interactive UI to ensure data organization and easy access.">تطبيق ويب مخصص لحفظ السجلات والملاحظات مع واجهة مستخدم تفاعلية لضمان تنظيم البيانات وسهولة الوصول إليها.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">HTML/CSS/JS</span>
-                            <span class="bg-slate-50 px-3 py-1 rounded border border-slate-200">MySQL</span>
+                    <div class="p-5 md:p-6">
+                        <h4 class="text-lg md:text-xl font-black text-slate-600 mb-2 md:mb-3 group-hover:text-slate-500 transition-colors" data-ar="نظام أرشفة وتدوين السجلات" data-en="Archiving & Notes Management">نظام أرشفة وتدوين السجلات</h4>
+                        <p class="text-slate-500 mb-4 md:mb-6 text-xs md:text-sm font-medium leading-relaxed" data-ar="تطبيق ويب مخصص لحفظ السجلات والملاحظات مع واجهة مستخدم تفاعلية لضمان تنظيم البيانات وسهولة الوصول إليها." data-en="A web application dedicated to keeping records and notes with an interactive UI to ensure data organization and easy access.">تطبيق ويب مخصص لحفظ السجلات والملاحظات مع واجهة مستخدم تفاعلية لضمان تنظيم البيانات وسهولة الوصول إليها.</p>
+                        <div class="flex flex-wrap gap-2 text-[10px] md:text-xs font-bold text-slate-500">
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">HTML/CSS/JS</span>
+                            <span class="bg-slate-50 px-2 md:px-3 py-1 rounded border border-slate-200">MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -224,39 +238,59 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white/70 backdrop-blur-lg border-t border-white shadow-sm">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-4xl font-black text-slate-600 mb-6" data-aos="fade-up" data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h3>
-            <p class="text-slate-500 mb-12 text-lg font-medium" data-aos="fade-up" data-aos-delay="100" data-ar="لطلب الخدمات البرمجية أو الاستشارات التقنية، يرجى التواصل عبر الروابط المباشرة أدناه." data-en="To request software services or technical consultations, please contact via the direct links below.">لطلب الخدمات البرمجية أو الاستشارات التقنية، يرجى التواصل عبر الروابط المباشرة أدناه.</p>
+    <section id="contact" class="py-16 md:py-24 bg-white/70 backdrop-blur-lg border-t border-white shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-black text-slate-600 mb-4 md:mb-6" data-aos="fade-up" data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h3>
+            <p class="text-slate-500 mb-8 md:mb-12 text-base md:text-lg font-medium" data-aos="fade-up" data-aos-delay="100" data-ar="لطلب الخدمات البرمجية أو الاستشارات التقنية، يرجى التواصل عبر الروابط المباشرة أدناه." data-en="To request software services or technical consultations, please contact via the direct links below.">لطلب الخدمات البرمجية أو الاستشارات التقنية، يرجى التواصل عبر الروابط المباشرة أدناه.</p>
             
-            <div class="flex flex-wrap justify-center gap-6 md:gap-10" data-aos="zoom-in" data-aos-delay="200">
-                <a href="https://wa.me/963954976298" target="_blank" class="social-icon flex items-center justify-center w-20 h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-green-500 hover:shadow-green-500/20 group">
-                    <i class="fa-brands fa-whatsapp text-4xl text-slate-400 group-hover:text-green-500 transition-colors"></i>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-10" data-aos="zoom-in" data-aos-delay="200">
+                <a href="https://wa.me/963954976298" target="_blank" class="social-icon flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-green-500 hover:shadow-green-500/20 group">
+                    <i class="fa-brands fa-whatsapp text-3xl md:text-4xl text-slate-400 group-hover:text-green-500 transition-colors"></i>
                 </a>
 
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nourhokan001@gmail.com" target="_blank" class="social-icon flex items-center justify-center w-20 h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-blue-500 hover:shadow-blue-500/20 group">
-                    <i class="fa-regular fa-envelope text-4xl text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nourhokan001@gmail.com" target="_blank" class="social-icon flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-blue-500 hover:shadow-blue-500/20 group">
+                    <i class="fa-regular fa-envelope text-3xl md:text-4xl text-slate-400 group-hover:text-blue-500 transition-colors"></i>
                 </a>
 
-                <a href="#" target="_blank" class="social-icon flex items-center justify-center w-20 h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-blue-700 hover:shadow-blue-700/20 group">
-                    <i class="fa-brands fa-linkedin-in text-4xl text-slate-400 group-hover:text-blue-700 transition-colors"></i>
+                <a href="#" target="_blank" class="social-icon flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-blue-700 hover:shadow-blue-700/20 group">
+                    <i class="fa-brands fa-linkedin-in text-3xl md:text-4xl text-slate-400 group-hover:text-blue-700 transition-colors"></i>
                 </a>
 
-                <a href="#" target="_blank" class="social-icon flex items-center justify-center w-20 h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-slate-800 hover:shadow-slate-800/20 group">
-                    <i class="fa-brands fa-github text-4xl text-slate-400 group-hover:text-slate-800 transition-colors"></i>
+                <a href="#" target="_blank" class="social-icon flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white border border-slate-200 rounded-full shadow-md hover:border-slate-800 hover:shadow-slate-800/20 group">
+                    <i class="fa-brands fa-github text-3xl md:text-4xl text-slate-400 group-hover:text-slate-800 transition-colors"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 text-center text-slate-500 text-sm bg-white border-t border-slate-200 font-medium">
+    <footer class="py-6 md:py-8 text-center text-slate-500 text-xs md:text-sm bg-white border-t border-slate-200 font-medium">
         <p>&copy; 2026 Nour Hokan</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true, offset: 80 });
+        // تفعيل مكتبة الحركات
+        AOS.init({ once: true, offset: 50 });
 
+        // سكريبت القائمة الجانبية للهاتف
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+
+        // إغلاق القائمة عند الضغط على أي رابط في الهاتف
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            });
+        });
+
+        // سكريبت تغيير اللغة
         let currentLang = 'ar';
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
